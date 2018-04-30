@@ -3,7 +3,7 @@ package com.dev.essentials.springbootessentials.exception;
 /**
  * Created by Samuel on 28/04/18.
  */
-public class ValidationExceptionDetail extends ErrorDetail {
+public class ValidationExceptionDetails extends ErrorDetails {
 
     private String field;
     private String fieldMessage;
@@ -59,8 +59,8 @@ public class ValidationExceptionDetail extends ErrorDetail {
             return this;
         }
 
-        public ValidationExceptionDetail build() {
-            ValidationExceptionDetail validationExceptionDetails = new ValidationExceptionDetail();
+        public ValidationExceptionDetails build() {
+            ValidationExceptionDetails validationExceptionDetails = new ValidationExceptionDetails();
             validationExceptionDetails.setDeveloperMessage(developerMessage);
             validationExceptionDetails.setTitle(title);
             validationExceptionDetails.setDetail(detail);

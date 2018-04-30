@@ -4,6 +4,7 @@ import com.dev.essentials.springbootessentials.exception.ResourceNotFoundExcepti
 import com.dev.essentials.springbootessentials.model.Student;
 import com.dev.essentials.springbootessentials.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,8 +25,8 @@ public class StudentEndpoint {
 	}
 
     @GetMapping
-	public ResponseEntity<?> listAll() {
-		return new ResponseEntity<>(studentDao.findAll(), HttpStatus.OK);
+	public ResponseEntity<?> listAll(Pageable pageable) {
+		return new ResponseEntity<>(studentDao.findAll(pageable), HttpStatus.OK);
 	}
 
     @GetMapping(path = "/{id}")

@@ -3,7 +3,7 @@ package com.dev.essentials.springbootessentials.exception;
 /**
  * Created by Samuel on 28/04/18.
  */
-public class ResourceNotFoundDetails extends ErrorDetail {
+public class ResourceNotFoundDetails extends ErrorDetails {
 
     public static final class Builder {
         private String title;
